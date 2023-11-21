@@ -1,0 +1,33 @@
+/* Add your CSS styling here */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  /* Add more styling */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  /* Add more styling */
+}
+
+.hero {
+  background-color: #77AA77; /* Example color */
+  text-align: center;
+  /* Add more styling */
+}
+
+#joinUs {
+  background-color: #66CC66; /* Example button color */
+  border: none;
+  /* Add more styling */
+}
+
+.events {
+  /* Add styling for events section */
+}
+
+/* More CSS for layout, typography, and responsive design */
