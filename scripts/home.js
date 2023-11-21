@@ -1,5 +1,11 @@
-// JavaScript to handle event carousel or any interactive elements
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialization code for the events carousel
-  // For example, you could use a library like Slick or Swiper for the carousel.
-});
+$(document).ready(function(){
+	$('.header').height($(window).height());
+})
+
+var ready = (callback) => {
+    if (document.readyState != "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+}
+ready(() => {
+    document.querySelector(".header").style.height = window.innerHeight + "px";
+})
