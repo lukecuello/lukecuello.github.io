@@ -44,42 +44,46 @@
     
   
           <!-- edit section -->
-        
-            <header class="container mt-3 text-center">
-              <h1>Contact Us</h1>
-            </header>
+          <section class="container mt-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <form action="mailto:access@dlsu.edu.ph?body=" method="post" enctype="text/plain">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter your phone number (11 digits only)" required>
+                    <small id="phoneHelp" class="form-text text-muted">Please enter 11 digits with no spaces or special characters.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="questionConcern">Question/Concern</label>
+                    <textarea class="form-control" id="questionConcern" name="questionConcern" rows="4" placeholder="Enter your question or concern" required></textarea>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                </form>
+              </div>
+            </div>
           
-
-<section class="container mt-4">
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <form action="mailto:access@dlsu.edu.ph" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter your phone number (11 digits only)" required>
-          <small id="phoneHelp" class="form-text text-muted">Please enter 11 digits with no spaces or special characters.</small>
-        </div>
-        <div class="form-group">
-          <label for="questionConcern">Question/Concern</label>
-          <textarea class="form-control" id="questionConcern" name="questionConcern" rows="4" placeholder="Enter your question or concern" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  </div>
-</section>
+            <script>
+              function submitForm() {
+                var email = document.getElementById('email').value;
+      var questionConcern = document.getElementById('questionConcern').value;
+      var mailtoLink = 'mailto:access@dlsu.edu.ph?subject=Question/Concern Submission&body=' + encodeURIComponent(questionConcern) + '&from=' + encodeURIComponent(email);
+      window.location.href = mailtoLink;
+              }
+            </script>
+          </section>
+          
 
 
           
